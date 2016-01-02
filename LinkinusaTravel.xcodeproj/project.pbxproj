@@ -8,13 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		172D0E5D1C36C268008C6682 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172D0E5C1C36C268008C6682 /* AppDelegate.swift */; };
-		172D0E5F1C36C268008C6682 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172D0E5E1C36C268008C6682 /* FirstViewController.swift */; };
-		172D0E611C36C268008C6682 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172D0E601C36C268008C6682 /* SecondViewController.swift */; };
 		172D0E641C36C268008C6682 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 172D0E621C36C268008C6682 /* Main.storyboard */; };
 		172D0E661C36C268008C6682 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 172D0E651C36C268008C6682 /* Assets.xcassets */; };
 		172D0E691C36C268008C6682 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 172D0E671C36C268008C6682 /* LaunchScreen.storyboard */; };
 		172D0E741C36C268008C6682 /* LinkinusaTravelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172D0E731C36C268008C6682 /* LinkinusaTravelTests.swift */; };
 		172D0E7F1C36C268008C6682 /* LinkinusaTravelUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172D0E7E1C36C268008C6682 /* LinkinusaTravelUITests.swift */; };
+		172D0E8F1C36CD5D008C6682 /* GroupTravelTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172D0E8E1C36CD5D008C6682 /* GroupTravelTableVC.swift */; };
+		172D0E911C36CD8E008C6682 /* CustomTravelTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172D0E901C36CD8E008C6682 /* CustomTravelTableVC.swift */; };
+		172D0E971C36DCFD008C6682 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172D0E961C36DCFD008C6682 /* CustomTableViewCell.swift */; };
+		172D0E991C36DDCE008C6682 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 172D0E981C36DDCE008C6682 /* 1.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,8 +39,6 @@
 /* Begin PBXFileReference section */
 		172D0E591C36C268008C6682 /* LinkinusaTravel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LinkinusaTravel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		172D0E5C1C36C268008C6682 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		172D0E5E1C36C268008C6682 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		172D0E601C36C268008C6682 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		172D0E631C36C268008C6682 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		172D0E651C36C268008C6682 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		172D0E681C36C268008C6682 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +49,10 @@
 		172D0E7A1C36C268008C6682 /* LinkinusaTravelUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LinkinusaTravelUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		172D0E7E1C36C268008C6682 /* LinkinusaTravelUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkinusaTravelUITests.swift; sourceTree = "<group>"; };
 		172D0E801C36C268008C6682 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		172D0E8E1C36CD5D008C6682 /* GroupTravelTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupTravelTableVC.swift; sourceTree = "<group>"; };
+		172D0E901C36CD8E008C6682 /* CustomTravelTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTravelTableVC.swift; sourceTree = "<group>"; };
+		172D0E961C36DCFD008C6682 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		172D0E981C36DDCE008C6682 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,12 +104,14 @@
 			isa = PBXGroup;
 			children = (
 				172D0E5C1C36C268008C6682 /* AppDelegate.swift */,
-				172D0E5E1C36C268008C6682 /* FirstViewController.swift */,
-				172D0E601C36C268008C6682 /* SecondViewController.swift */,
+				172D0E8E1C36CD5D008C6682 /* GroupTravelTableVC.swift */,
+				172D0E901C36CD8E008C6682 /* CustomTravelTableVC.swift */,
 				172D0E621C36C268008C6682 /* Main.storyboard */,
 				172D0E651C36C268008C6682 /* Assets.xcassets */,
 				172D0E671C36C268008C6682 /* LaunchScreen.storyboard */,
 				172D0E6A1C36C268008C6682 /* Info.plist */,
+				172D0E961C36DCFD008C6682 /* CustomTableViewCell.swift */,
+				172D0E981C36DDCE008C6682 /* 1.png */,
 			);
 			path = LinkinusaTravel;
 			sourceTree = "<group>";
@@ -232,6 +238,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				172D0E991C36DDCE008C6682 /* 1.png in Resources */,
 				172D0E691C36C268008C6682 /* LaunchScreen.storyboard in Resources */,
 				172D0E661C36C268008C6682 /* Assets.xcassets in Resources */,
 				172D0E641C36C268008C6682 /* Main.storyboard in Resources */,
@@ -259,9 +266,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				172D0E611C36C268008C6682 /* SecondViewController.swift in Sources */,
+				172D0E911C36CD8E008C6682 /* CustomTravelTableVC.swift in Sources */,
 				172D0E5D1C36C268008C6682 /* AppDelegate.swift in Sources */,
-				172D0E5F1C36C268008C6682 /* FirstViewController.swift in Sources */,
+				172D0E971C36DCFD008C6682 /* CustomTableViewCell.swift in Sources */,
+				172D0E8F1C36CD5D008C6682 /* GroupTravelTableVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
