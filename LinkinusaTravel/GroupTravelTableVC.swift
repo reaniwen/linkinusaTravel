@@ -7,20 +7,43 @@
 //
 
 import UIKit
+import Parse
 
 class GroupTravelTableVC: UITableViewController {
     
-    let data = ["foo", "bar", "swift"]
+    let olddata = ["foo", "bar", "swift"]
+    var data = [PFObject]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // add data to locations
+//        let testArray = [(key:"city", val:"Orlando"), (key:"price", val:"600")]
+//        let parseLocation = ParseFunctions(parseClass: "location")
+//        parseLocation.addData(testArray)
+
+        // retrieve data
+        let query = PFQuery(className:"location")
+//        query.whereKey("playerName", equalTo:"Sean Plott")
+        query.findObjectsInBackgroundWithBlock {
+            (objects: [PFObject]?, error: NSError?) -> Void in
+            
+            if error == nil {
+//                print("Successfully retrieved \(objects!.count) locations.")
+                if let objects = objects {
+                    for object in objects {
+                        print(object.objectId)
+                    }
+                    self.data = objects
+                    self.tableView.reloadData()
+                }
+            } else {
+                // Log details of the failure
+                print("Error: \(error!) \(error!.userInfo)")
+            }
+        }
 //        self.tableView.estimatedRowHeight = 140.0
         self.tableView.rowHeight = 140
-        
-//        let nib = UINib(nibName: "CustomTableViewCell", bundle: nil)
-//        
-//        tableView.registerNib(nib, forCellReuseIdentifier: "testcell")
     }
 
     override func didReceiveMemoryWarning() {
@@ -43,14 +66,26 @@ class GroupTravelTableVC: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 //        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
-//        let cell:CustomTableViewCell = tableView.dequeueReusableCellWithIdentifier("CustomCell", forIndexPath: indexPath) as! CustomTableViewCell
-        let cell: CustomTableViewCell = tableView.dequeueReusableCellWithIdentifier("CustomCell") as! CustomTableViewCell
         
-        cell.loadItem(title: data[indexPath.row], image: UIImage(named: "1.png")!)
+        // These two both works
+        let cell:GroupTravelTableViewCell = tableView.dequeueReusableCellWithIdentifier("GroupCell", forIndexPath: indexPath) as! GroupTravelTableViewCell
+//        let cell: CustomTableViewCell = tableView.dequeueReusableCellWithIdentifier("CustomCell") as! CustomTableViewCell
+
         // Configure the cell...
+        let title = self.data[indexPath.row]["city"] as! String
+        let price = self.data[indexPath.row]["price"] as! String
+        let imageFile = self.data[indexPath.row]["photo"] as! PFFile
+        
+        
+        cell.loadItem(title: title, price: price, imageFile: imageFile)
 
         return cell
     }
+    
+//    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+//        <#code#>
+//    }
+    
     
 
     /*
@@ -88,14 +123,29 @@ class GroupTravelTableVC: UITableViewController {
     }
     */
 
-    /*
+
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if segue.identifier == "GroupDetail" {
+            if let indexPath = self.tableView.indexPathForSelectedRow {
+                let controller = (segue.destinationViewController as! UINavigationController).topViewController as! GroupDetailVC
+                controller.parseID = self.data[indexPath.row].objectId!
+            }
+        }
+//        if segue.identifier == "showQuestionnaire"{
+//            if let indexPath = self.tableView.indexPathForSelectedRow() {
+//                let controller = (segue.destinationViewController as! UINavigationController).topViewController as! QuestionnaireController
+//                let patientQuestionnaire = patientQuestionnaires[indexPath.row] as! PatientQuestionnaire
+//                controller.selectedQuestionnaire = patientQuestionnaire
+//                self.performSegueWithIdentifier("showQuestionnaire", sender: self)
+//            }
+//        }
+        
     }
-    */
+
 
 }

@@ -2,7 +2,7 @@
 //  CustomTravelTableVC.swift
 //  LinkinusaTravel
 //
-//  Created by Rean on 1/1/16.
+//  Created by Rean on 1/4/16.
 //  Copyright © 2016 Rean. All rights reserved.
 //
 
