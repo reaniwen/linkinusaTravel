@@ -156,6 +156,7 @@
 		172D0E5B1C36C268008C6682 /* LinkinusaTravel */ = {
 			isa = PBXGroup;
 			children = (
+				17F8E6F91C40698A002B9A59 /* GroupDetailCellGroup */,
 				172D0E5C1C36C268008C6682 /* AppDelegate.swift */,
 				172D0E621C36C268008C6682 /* Main.storyboard */,
 				172D0E8E1C36CD5D008C6682 /* GroupTravelTableVC.swift */,
@@ -210,6 +211,13 @@
 				17ECF04E1C3968DC00F3993F /* ParseUI.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		17F8E6F91C40698A002B9A59 /* GroupDetailCellGroup */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = GroupDetailCellGroup;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

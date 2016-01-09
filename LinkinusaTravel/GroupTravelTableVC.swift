@@ -82,6 +82,9 @@ class GroupTravelTableVC: UITableViewController {
         return cell
     }
     
+    @IBAction func cancelToPlayersViewController(segue:UIStoryboardSegue) {
+    }
+    
 //    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
 //        <#code#>
 //    }
@@ -134,6 +137,10 @@ class GroupTravelTableVC: UITableViewController {
             if let indexPath = self.tableView.indexPathForSelectedRow {
                 let controller = (segue.destinationViewController as! UINavigationController).topViewController as! GroupDetailVC
                 controller.parseID = self.data[indexPath.row].objectId!
+                let cell = self.tableView.cellForRowAtIndexPath(indexPath) as! GroupTravelTableViewCell
+                controller.image = cell.backgroundImage.image!
+                controller.placeText = cell.titleLabel.text!
+                controller.priceText = cell.priceLabel.text!
             }
         }
 //        if segue.identifier == "showQuestionnaire"{

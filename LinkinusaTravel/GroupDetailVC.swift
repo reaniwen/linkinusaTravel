@@ -11,12 +11,22 @@ import UIKit
 class GroupDetailVC: UIViewController {
 
     var parseID: String = ""
+    var image: UIImage = UIImage()
+    var placeText: String = ""
+    var priceText: String = ""
+    
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var placeLabel: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         print(parseID)
-        
+        loadDetail()
 
         // Do any additional setup after loading the view.
     }
@@ -26,6 +36,12 @@ class GroupDetailVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func loadDetail() {
+        placeLabel.text = placeText
+        priceLabel.text = priceText
+        imageView.image = image
+    }
+        
 
     /*
     // MARK: - Navigation
