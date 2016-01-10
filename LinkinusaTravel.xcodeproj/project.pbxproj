@@ -17,6 +17,7 @@
 		172D0E971C36DCFD008C6682 /* GroupTravelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172D0E961C36DCFD008C6682 /* GroupTravelTableViewCell.swift */; };
 		172D0E991C36DDCE008C6682 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 172D0E981C36DDCE008C6682 /* 1.png */; };
 		173596A21C3E263F00B24D1C /* GroupDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173596A11C3E263F00B24D1C /* GroupDetailVC.swift */; };
+		1756D7E11C42B3E9002B39BE /* GroupTravelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1756D7E01C42B3E9002B39BE /* GroupTravelModel.swift */; };
 		17ECF04F1C3968DC00F3993F /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17ECF0491C3968DC00F3993F /* Bolts.framework */; };
 		17ECF0501C3968DC00F3993F /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17ECF04A1C3968DC00F3993F /* Parse.framework */; };
 		17ECF0511C3968DC00F3993F /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17ECF04B1C3968DC00F3993F /* ParseFacebookUtils.framework */; };
@@ -71,6 +72,7 @@
 		172D0E961C36DCFD008C6682 /* GroupTravelTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupTravelTableViewCell.swift; sourceTree = "<group>"; };
 		172D0E981C36DDCE008C6682 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
 		173596A11C3E263F00B24D1C /* GroupDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupDetailVC.swift; sourceTree = "<group>"; };
+		1756D7E01C42B3E9002B39BE /* GroupTravelModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupTravelModel.swift; sourceTree = "<group>"; };
 		17ECF0491C3968DC00F3993F /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = Parse/Bolts.framework; sourceTree = "<group>"; };
 		17ECF04A1C3968DC00F3993F /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = Parse/Parse.framework; sourceTree = "<group>"; };
 		17ECF04B1C3968DC00F3993F /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtils.framework; path = Parse/ParseFacebookUtils.framework; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 				172D0E621C36C268008C6682 /* Main.storyboard */,
 				172D0E8E1C36CD5D008C6682 /* GroupTravelTableVC.swift */,
 				172D0E961C36DCFD008C6682 /* GroupTravelTableViewCell.swift */,
+				1756D7E01C42B3E9002B39BE /* GroupTravelModel.swift */,
 				173596A11C3E263F00B24D1C /* GroupDetailVC.swift */,
 				17ECF06D1C3B3CAC00F3993F /* CustomTravelTableVC.swift */,
 				17ECF0691C3AD40900F3993F /* ParseFunctions.swift */,
@@ -352,6 +355,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1756D7E11C42B3E9002B39BE /* GroupTravelModel.swift in Sources */,
 				17ECF06A1C3AD40900F3993F /* ParseFunctions.swift in Sources */,
 				172D0E5D1C36C268008C6682 /* AppDelegate.swift in Sources */,
 				172D0E971C36DCFD008C6682 /* GroupTravelTableViewCell.swift in Sources */,

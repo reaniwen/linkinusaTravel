@@ -42,6 +42,7 @@ class GroupTravelTableVC: UITableViewController {
                 print("Error: \(error!) \(error!.userInfo)")
             }
         }
+        
 //        self.tableView.estimatedRowHeight = 140.0
         self.tableView.rowHeight = 140
     }
@@ -135,7 +136,8 @@ class GroupTravelTableVC: UITableViewController {
         // Pass the selected object to the new view controller.
         if segue.identifier == "GroupDetail" {
             if let indexPath = self.tableView.indexPathForSelectedRow {
-                let controller = (segue.destinationViewController as! UINavigationController).topViewController as! GroupDetailVC
+                let controller = segue.destinationViewController as! GroupDetailVC
+//                let controller = (segue.destinationViewController as! UINavigationController).topViewController as! GroupDetailVC
                 controller.parseID = self.data[indexPath.row].objectId!
                 let cell = self.tableView.cellForRowAtIndexPath(indexPath) as! GroupTravelTableViewCell
                 controller.image = cell.backgroundImage.image!
@@ -143,15 +145,6 @@ class GroupTravelTableVC: UITableViewController {
                 controller.priceText = cell.priceLabel.text!
             }
         }
-//        if segue.identifier == "showQuestionnaire"{
-//            if let indexPath = self.tableView.indexPathForSelectedRow() {
-//                let controller = (segue.destinationViewController as! UINavigationController).topViewController as! QuestionnaireController
-//                let patientQuestionnaire = patientQuestionnaires[indexPath.row] as! PatientQuestionnaire
-//                controller.selectedQuestionnaire = patientQuestionnaire
-//                self.performSegueWithIdentifier("showQuestionnaire", sender: self)
-//            }
-//        }
-        
     }
 
 
