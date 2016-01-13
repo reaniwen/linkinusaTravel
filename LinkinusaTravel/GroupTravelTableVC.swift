@@ -16,11 +16,6 @@ class GroupTravelTableVC: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // add data to locations
-//        let testArray = [(key:"city", val:"Orlando"), (key:"price", val:"600")]
-//        let parseLocation = ParseFunctions(parseClass: "location")
-//        parseLocation.addData(testArray)
 
         // retrieve data
         let query = PFQuery(className:"location")
@@ -43,8 +38,12 @@ class GroupTravelTableVC: UITableViewController {
             }
         }
         
+        
+        let screenWidth  = UIScreen.mainScreen().fixedCoordinateSpace.bounds.width
+//        let screenHeight = UIScreen.mainScreen().fixedCoordinateSpace.bounds.height
 //        self.tableView.estimatedRowHeight = 140.0
-        self.tableView.rowHeight = 140
+//        self.tableView.rowHeight = 140
+        self.tableView.rowHeight = screenWidth * 9 / 21
     }
 
     override func didReceiveMemoryWarning() {

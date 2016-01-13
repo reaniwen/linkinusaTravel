@@ -46,33 +46,33 @@
                                 </tableViewCellContentView>
                                 <accessibility key="accessibilityConfiguration" identifier="testcell1"/>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="GroupCell" rowHeight="140" id="6I0-QZ-PE4" customClass="GroupTravelTableViewCell" customModule="LinkinusaTravel" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="GroupCell" rowHeight="140" id="6I0-QZ-PE4" customClass="GroupTravelTableViewCell" customModule="LinkinusaTravel" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="136" width="600" height="140"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6I0-QZ-PE4" id="2g7-O6-wXz">
-                                    <rect key="frame" x="0.0" y="0.0" width="567" height="139"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="139"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2vf-zf-GfC">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="111"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2vf-zf-GfC">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="139"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oyX-Sw-fxb">
                                             <rect key="frame" x="8" y="110" width="42" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eBS-nS-YOr">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eBS-nS-YOr">
                                             <rect key="frame" x="550" y="110" width="42" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="bottomMargin" secondItem="oyX-Sw-fxb" secondAttribute="bottom" id="ImA-oQ-TB9"/>
                                         <constraint firstItem="2vf-zf-GfC" firstAttribute="top" secondItem="2g7-O6-wXz" secondAttribute="topMargin" constant="-8" id="Ur2-D1-CJH"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="2vf-zf-GfC" secondAttribute="bottom" constant="20" id="ZCL-mm-xMc"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="2vf-zf-GfC" secondAttribute="bottom" constant="-8" id="ZCL-mm-xMc"/>
                                         <constraint firstItem="2vf-zf-GfC" firstAttribute="leading" secondItem="2g7-O6-wXz" secondAttribute="leadingMargin" constant="-8" id="abL-vn-0aQ"/>
                                         <constraint firstItem="eBS-nS-YOr" firstAttribute="trailing" secondItem="2g7-O6-wXz" secondAttribute="trailingMargin" id="eJM-IE-ptY"/>
                                         <constraint firstItem="eBS-nS-YOr" firstAttribute="bottom" secondItem="2g7-O6-wXz" secondAttribute="bottomMargin" id="np7-ps-Fmd"/>
@@ -80,7 +80,9 @@
                                         <constraint firstAttribute="trailingMargin" secondItem="2vf-zf-GfC" secondAttribute="trailing" constant="-8" id="zVe-uN-7IL"/>
                                     </constraints>
                                 </tableViewCellContentView>
-                                <accessibility key="accessibilityConfiguration" identifier="testcell"/>
+                                <accessibility key="accessibilityConfiguration" identifier="testcell">
+                                    <accessibilityTraits key="traits" none="YES"/>
+                                </accessibility>
                                 <connections>
                                     <outlet property="backgroundImage" destination="2vf-zf-GfC" id="uAC-in-58Y"/>
                                     <outlet property="priceLabel" destination="eBS-nS-YOr" id="lbs-6A-AUM"/>
